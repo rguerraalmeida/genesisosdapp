@@ -1,0 +1,42 @@
+[
+  {
+    "id": "Island",
+    "name": "the island",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/e/eb/MAP_BC.png/600px-MAP_BC.png?version=81dd059315fcf9e04390b7543a368146"
+  },
+  {
+    "id": "Center",
+    "name": "the center",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/0/04/The_Center_Map.jpg/600px-The_Center_Map.jpg?version=92192b0fafb9b38906f6614f8d853e85"
+  },
+  {
+    "id": "SE",
+    "name": "Scorched Earth",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/8/83/Scorched_Earth_Map.png/600px-Scorched_Earth_Map.png?version=cf2d780eb54d4f2d46eceb7921ab03d2"
+  },
+  {
+    "id": "Ragnarok",
+    "name": "Ragnarok",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/d/dd/Ragnarok_Map.png/600px-Ragnarok_Map.png?version=d6338e8c41e68aa78179f54e6dcc46c0"
+  },
+  {
+    "id": "Aberration",
+    "name": "Aberration",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/6/68/Aberration_Map.jpg/600px-Aberration_Map.jpg?version=6de7799336be1c6030927cc8095fd53a"
+  },
+  {
+    "id": "Extinction",
+    "name": "Extinction",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/f/ff/Extinction_Map.jpg/600px-Extinction_Map.jpg?version=c4849a1c1255209a2d7fb996efc8832d"
+  },
+  {
+    "id": "Valguero",
+    "name": "Valguero",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/1/19/Valguero_Map.jpg/600px-Valguero_Map.jpg?version=fe46232418fd06d644e088888bce5bf9"
+  },
+  {
+    "id": "GenesisPart1",
+    "name": "Genesis_Part_1_Map",
+    "wikiLogo": "https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/thumb/e/e8/Genesis_Part_1_Map.jpg/600px-Genesis_Part_1_Map.jpg?version=d4ce42631dd46b83181abce6485a346c"
+  }
+]
