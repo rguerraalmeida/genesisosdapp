@@ -20,8 +20,8 @@ class MainPanel extends React.Component {
         const maps = mapsdata.map((element) => 
         <div className='main-panel-item' id={element.id}>
             <a href="#" onclick="console.log('The link was clicked.'); return false">
-                <img src={element.wikiLogo} alt={element.name}/>
-                <div class="text">{element.name}</div>
+                <img src={element.wikiLogo} alt=""/>
+                <div class="text">{element.id}</div>
             </a>
         </div>);
 

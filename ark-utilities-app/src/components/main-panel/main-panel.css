@@ -1,15 +1,20 @@
 .main-panel{
-    display: flex;
-    flex-flow: row wrap;
+     display: flex;
+    flex-flow: column wrap;
     justify-content: flex-start ;
-    align-items: flex-start;
+    align-items: flex-start; 
     
   }
   
   .main-panel-item  {
-    height: 160px;
-    width: 160px;
+    
+    height: 100%;
+    width: 100%;
     margin: 1em 1em 1em 1em;
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 55px;
+    max-height: 55px;
   }
   
   .main-panel-item img {
@@ -19,7 +24,7 @@
   .main-panel-item .text {
     background:rgba(255,255,255,0.5);
     position: relative;
-    transform:translateY(-220%);
+    transform:translateY(-120%);
     text-align: left;  
    
   }

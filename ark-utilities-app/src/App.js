@@ -9,9 +9,29 @@ import DinoSheetService from './services/dino-sheet-reader';
 function App() {
   return (
     <div className="App">
-      <MainPanel />
-      <SearchPanel />
-      <DinoTable dinos = { DinoSheetService('dummy') } />
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">UK PvE No mods | Dino search utility</a>
+      </nav>
+    
+      <div className="container-fluid">
+        <div className="row no-gutters">
+          <div className="col-2 d-none d-sm-block">
+            <MainPanel />
+          </div>
+          <div className="col-10">
+            <div className="row no-gutters" >
+              <SearchPanel />
+            </div>
+            <div className="row no-gutters" >
+              <DinoTable dinos = { DinoSheetService('dummy') } />
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+      
+     
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -29,6 +49,7 @@ function App() {
       </header> */}
 
 
+   
 
     </div>
   );
