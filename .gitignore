@@ -1,2 +1,14 @@
 ark-utilities-app/src/artifacts/dropbox-info.js
 ark-utilities-web/arkutilities.PublishSettings
+ark-utilities-web/ark-utilities-web.api/bin/
+ark-utilities-web/ark-utilities-web.api/obj/
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities - FTP.pubxml
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities - FTP.pubxml.user
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities - ReadOnly - FTP.pubxml
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities - ReadOnly - FTP.pubxml.user
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities - Web Deploy.pubxml
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities - Web Deploy.pubxml.user
+ark-utilities-web/.vs/ark-utilities-web/DesignTimeBuild/.dtbcache.v2
+ark-utilities-web/.vs/ark-utilities-web/v16/.suo
+ark-utilities-web/.vs/ark-utilities-webapi/DesignTimeBuild/.dtbcache.v2
+ark-utilities-web/.vs/ark-utilities-webapi/v16/.suo
