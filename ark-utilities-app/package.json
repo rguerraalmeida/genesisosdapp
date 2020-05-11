@@ -39,5 +39,8 @@
   },
   "devDependencies": {
     "g-sheets-api": "^1.2.0"
+  },
+  "engines": {
+    "node": "10.0"
   }
 }

@@ -19,12 +19,12 @@ class DinosRepository extends React.Component{
             console.info(err + " url: " + url);
         });
 
+      }
         // axios.get('https://www.dropbox.com/s/v4dn5tbtr21pnk6/arkexport.xlsx?dl=1')
         //   .then(res => {
         //     const persons = res.data;
         //     this.setState({ persons });
         //   })
-      }
 
     render() {
         return   <div className='cenas'>Rui</div>;
