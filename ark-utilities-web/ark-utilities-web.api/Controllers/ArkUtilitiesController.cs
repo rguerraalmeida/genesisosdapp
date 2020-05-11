@@ -11,12 +11,19 @@ using Microsoft.Extensions.Logging;
 
 namespace ark_utilities_web.api.Controllers
 {
- 
+    
     [ApiController]
     //[Route("[controller]")]
     [Route("api/[controller]")]
     public class ArkUtilitiesController : ControllerBase
     {
+        private readonly ILogger<ArkUtilitiesController> _logger;
+
+        public ArkUtilitiesController(ILogger<ArkUtilitiesController> logger)
+        {
+            _logger = logger;
+        }
+
         // GET: api/ArkUtilities
         [HttpGet]
         public IEnumerable<LostDino> Get()

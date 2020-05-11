@@ -14,3 +14,9 @@ ark-utilities-web/.vs/ark-utilities-webapi/DesignTimeBuild/.dtbcache.v2
 ark-utilities-web/.vs/ark-utilities-webapi/v16/.suo
 ark-utilities-app/arkutilities.PublishSettings
 ark-utilities-web/arkutilities-api.PublishSettings
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - FTP.pubxml
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - FTP.pubxml.user
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - ReadOnly - FTP.pubxml
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - ReadOnly - FTP.pubxml.user
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - Web Deploy.pubxml
+ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - Web Deploy.pubxml.user
