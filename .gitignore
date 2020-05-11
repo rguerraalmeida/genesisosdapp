@@ -20,3 +20,4 @@ ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-
 ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - ReadOnly - FTP.pubxml.user
 ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - Web Deploy.pubxml
 ark-utilities-web/ark-utilities-web.api/Properties/PublishProfiles/arkutilities-api - Web Deploy.pubxml.user
+ark-utilities-app/arkutilities-app.PublishSettings
