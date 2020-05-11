@@ -19,9 +19,9 @@ class MainPanel extends React.Component {
     render(){
         const maps = mapsdata.map((element) => 
         <div className='main-panel-item' id={element.id}>
-            <a href="#" onclick="console.log('The link was clicked.'); return false">
+            <a href="#" onClick="console.log('The link was clicked.'); return false">
                 <img src={element.wikiLogo} alt=""/>
-                <div class="text">{element.id}</div>
+                <div className="text">{element.name}</div>
             </a>
         </div>);
 

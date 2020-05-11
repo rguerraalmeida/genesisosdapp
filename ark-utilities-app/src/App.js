@@ -4,13 +4,14 @@ import './App.css';
 import MainPanel from './components/main-panel/main-panel';
 import SearchPanel from './components/search-panel/search-panel';
 import DinoTable from './components/dino-table/dino-table';
-import DinoSheetService from './services/dino-sheet-reader';
+// import DinoSheetService from './services/dino-sheet-reader';
+// import DinosRepository from './services/dino-sheet-reader';
 
 function App() {
   return (
     <div className="App">
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">UK PvE No mods | Dino search utility</a>
+      <nav className="navbar navbar-expand navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">UK PvE No mods | Dino search utility</a>
       </nav>
     
       <div className="container-fluid">
@@ -23,7 +24,8 @@ function App() {
               <SearchPanel />
             </div>
             <div className="row no-gutters" >
-              <DinoTable dinos = { DinoSheetService('dummy') } />
+              {<DinoTable />}
+              
             </div>
           </div>
         </div>
