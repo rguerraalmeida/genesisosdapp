@@ -3,7 +3,6 @@ import './main-panel.css';
 import mapsdata from '../../data/maps.json';
 
 
-
 class MainPanel extends React.Component {
     constructor(props) {
         super(props);

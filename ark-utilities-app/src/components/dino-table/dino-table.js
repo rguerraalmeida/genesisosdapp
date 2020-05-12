@@ -3,7 +3,7 @@ import './dino-table.css';
 // import arkUtilitiesApi from '../../services/arkutilities-api';
 
 
-const API = 'https://arkutilities.azurewebsites.net';
+const API = 'https://arkutilities-api.azurewebsites.net';
 const DEFAULT_QUERY = '/api/arkutilities/';
 
 class DinoTable extends React.Component {
@@ -24,26 +24,32 @@ class DinoTable extends React.Component {
         //     .then(dinos => {
         //         this.setState({ dinos: dinos});
         //     });
-        debugger;
-        fetch(API + DEFAULT_QUERY)
-            .then(response => response.json())
-            .then(data => 
-            {
-                debugger;
-                this.setState({ dinos: data, isLoading: false });
-            });
+
+        const path = API + DEFAULT_QUERY;
+        console.log('calling fetch with url',path)
+        try {
+            fetch(API + DEFAULT_QUERY);
+          } catch(err) {
+            alert(err); // Failed to fetch
+          }
+        
+            // .then(response => response.json())
+            // .then(data => 
+            // {
+            //     this.setState({ dinos: data, isLoading: false });
+            // });
 
     }
 
 
     render(){
-        debugger;
-        const dinolis = this.state.dinos.map(dino => 
-            <li>{dino.name}</li>
-        );
+        // const dinolis = this.state.dinos.map(dino => 
+        //     <li>{dino.name}</li>
+        // );
 
         return (
-           <ul>{dinolis}</ul>
+        //    <ul>{dinolis}</ul>
+           <ul><li>Rui</li></ul>
         )
     }
 }
