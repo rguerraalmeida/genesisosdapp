@@ -59,19 +59,23 @@ namespace ark_utilities_web.api.DataAgents
                 var result = reader.AsDataSet(new ExcelDataSetConfiguration()
                 {
                     UseColumnDataType = true,
+                    FilterSheet = (tableReader, sheetIndex) => true,
                     ConfigureDataTable = (tableReader) => new ExcelDataTableConfiguration()
                     {
                         UseHeaderRow = true,
                     }
                 });
-                return MapDatasetData(result.Tables.Cast<DataTable>().First());
+                return MapDatasetData(result.Tables.Cast<DataTable>().ToList());
             }
         }
-        public IEnumerable<Dictionary<string, object>> MapDatasetData(DataTable dt)
+        public IEnumerable<Dictionary<string, object>> MapDatasetData(IEnumerable<DataTable> tables)
         {
+            foreach (DataTable dt in tables)
             foreach (DataRow dr in dt.Rows)
             {
                 var row = new Dictionary<string, object>();
+                row.Add("sheet", dt.TableName);
+
                 foreach (DataColumn col in dt.Columns)
                 {
                     row.Add(col.ColumnName, dr[col]);

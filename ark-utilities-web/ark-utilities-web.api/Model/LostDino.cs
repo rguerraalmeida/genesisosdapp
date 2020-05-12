@@ -17,6 +17,6 @@ namespace ark_utilities_web.api.Model
             public double X { get; set; }
             public string Status { get; set; }
             public string Timestamp { get; set; }
-
+            public string Sheet { get; set; }
     }
 }
