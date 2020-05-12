@@ -5,12 +5,12 @@
 // class arkutilitiesApi
 // {
 //     constructor() {
-//       this.servicePath = API_BASE_PATH + 'api/arkutilities'; //apiRestPath;
+//       this.apiUrl = API_BASE_PATH + 'api/arkutilities'; 
 //     }
 
-//     getLostDinos() {
-//        fetch(this.servicePath)
-//         .then(response => response.json());
+//     fetchDinos() {
+//       fetch(this.apiUrl)
+//        .then(response => response.json())
 
 //       return response;
 //     }
