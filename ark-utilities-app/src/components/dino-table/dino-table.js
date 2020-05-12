@@ -20,6 +20,7 @@ class DinoTable extends React.Component {
     componentDidMount() {
         const path = API + DEFAULT_QUERY;
         console.log('calling fetch with url',path)
+        debugger;
         try {
           fetch(API + DEFAULT_QUERY)
           .then(response => response.json())
