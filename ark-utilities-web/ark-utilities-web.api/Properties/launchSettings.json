@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "HealthMonitor",
+      "launchUrl": "healthmonitor",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "ark_utilities_webapi.api": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "HealthMonitor",
+      "launchUrl": "healthmonitor",
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

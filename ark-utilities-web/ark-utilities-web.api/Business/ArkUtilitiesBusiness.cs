@@ -19,20 +19,26 @@ namespace ark_utilities_web.api.Business
             _cache = memoryCache;
         }
 
-        public async Task<IEnumerable<LostDino>> GetMissingDinosaursList()
+        public async Task<IEnumerable<Dino>> GetDinosaurs()
         {
 
             string dinos = await LoadDinosFromStore();
-            List<LostDino> lostDinos = ConvertDinosJson(dinos);
+            List<Dino> lostDinos = ConvertDinosJson(dinos);
             return lostDinos;
         }
-
-
-        public async Task<IEnumerable<LostDino>> SearchMissingDinosaursList(string searchparam)
+        public async Task<IEnumerable<SimplifiedDino>> GetNamesAndLocation()
         {
-            IEnumerable<LostDino> lostDinos = await GetMissingDinosaursList();
+
+            string dinos = await LoadDinosFromStore();
+            List<Dino> lostDinos = ConvertDinosJson(dinos);
+            return lostDinos.Select(s => new SimplifiedDino() { Sheet = s.Sheet, Name = s.Name, X = s.X, Y = s.Y });
+        }
+
+        public async Task<IEnumerable<Dino>> SearchDinosaurs(string searchparam)
+        {
+            IEnumerable<Dino> lostDinos = await GetDinosaurs();
             
-            List<LostDino> searchedDinos = new List<LostDino>();
+            List<Dino> searchedDinos = new List<Dino>();
             searchedDinos.AddRange(lostDinos.Where(x => !string.IsNullOrWhiteSpace(x.Class) &&  x.Class.ToLowerInvariant().Contains(searchparam.ToLowerInvariant())));
             searchedDinos.AddRange(lostDinos.Where(x => !string.IsNullOrWhiteSpace(x.Name) && x.Name.ToLowerInvariant().Contains(searchparam.ToLowerInvariant())));
             searchedDinos.AddRange(lostDinos.Where(x => !string.IsNullOrWhiteSpace(x.TribeName) &&  x.TribeName.ToLowerInvariant().Contains(searchparam.ToLowerInvariant())));
@@ -67,9 +73,9 @@ namespace ark_utilities_web.api.Business
             return dinos;
         }
 
-        private List<LostDino> ConvertDinosJson(string dinos)
+        private List<Dino> ConvertDinosJson(string dinos)
         {
-            return JsonConvert.DeserializeObject<List<LostDino>>(dinos);
+            return JsonConvert.DeserializeObject<List<Dino>>(dinos);
         }
 
 

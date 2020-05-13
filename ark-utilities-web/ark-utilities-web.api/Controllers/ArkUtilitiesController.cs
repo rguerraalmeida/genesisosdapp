@@ -28,20 +28,29 @@ namespace ark_utilities_web.api.Controllers
         }
 
         // GET: api/ArkUtilities
-        [HttpGet]
-        public IEnumerable<LostDino> Get()
+        public IEnumerable<Dino> Get()
         {
             ArkUtilitiesBusiness arkUtilitiesBusiness = new ArkUtilitiesBusiness(_cache);
-            return arkUtilitiesBusiness.GetMissingDinosaursList().Result;
+            return arkUtilitiesBusiness.GetDinosaurs().Result;
         }
 
         // GET: api/ArkUtilities/5
         [HttpGet("{searchparams}", Name = "Get")]
-        public IEnumerable<LostDino> Get(string searchparams)
+        public IEnumerable<Dino> Get(string searchparams)
         {
             ArkUtilitiesBusiness arkUtilitiesBusiness = new ArkUtilitiesBusiness(_cache);
-            return arkUtilitiesBusiness.SearchMissingDinosaursList(searchparams).Result;
+            return arkUtilitiesBusiness.SearchDinosaurs(searchparams).Result;
         }
+
+        // GET: api/ArkUtilities
+        [Route("simplified")]
+        [HttpGet()]
+        public IEnumerable<SimplifiedDino> GetNames()
+        {
+            ArkUtilitiesBusiness arkUtilitiesBusiness = new ArkUtilitiesBusiness(_cache);
+            return arkUtilitiesBusiness.GetNamesAndLocation().Result;
+        }
+
 
         //// POST: api/ArkUtilities
         //[HttpPost]

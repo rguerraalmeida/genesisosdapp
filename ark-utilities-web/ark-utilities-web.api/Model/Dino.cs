@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ark_utilities_web.api.Model
 {
-    public class LostDino
+    public class Dino
     {
             public string Class { get; set; }
             public string Name { get; set; }
