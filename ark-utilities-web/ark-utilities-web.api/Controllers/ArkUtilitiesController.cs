@@ -7,6 +7,7 @@ using ark_utilities_web.api.Business;
 using ark_utilities_web.api.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 
 namespace ark_utilities_web.api.Controllers
@@ -18,26 +19,29 @@ namespace ark_utilities_web.api.Controllers
     public class ArkUtilitiesController : ControllerBase
     {
         private readonly ILogger<ArkUtilitiesController> _logger;
-
-        public ArkUtilitiesController(ILogger<ArkUtilitiesController> logger)
+        private readonly IMemoryCache _cache;
+       
+        public ArkUtilitiesController(ILogger<ArkUtilitiesController> logger, IMemoryCache memoryCache)
         {
             _logger = logger;
+            _cache = memoryCache;
         }
 
         // GET: api/ArkUtilities
         [HttpGet]
         public IEnumerable<LostDino> Get()
         {
-            ArkUtilitiesBusiness arkUtilitiesBusiness = new ArkUtilitiesBusiness();
+            ArkUtilitiesBusiness arkUtilitiesBusiness = new ArkUtilitiesBusiness(_cache);
             return arkUtilitiesBusiness.GetMissingDinosaursList().Result;
         }
 
-        //// GET: api/ArkUtilities/5
-        //[HttpGet("{id}", Name = "Get")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        // GET: api/ArkUtilities/5
+        [HttpGet("{searchparams}", Name = "Get")]
+        public IEnumerable<LostDino> Get(string searchparams)
+        {
+            ArkUtilitiesBusiness arkUtilitiesBusiness = new ArkUtilitiesBusiness(_cache);
+            return arkUtilitiesBusiness.SearchMissingDinosaursList(searchparams).Result;
+        }
 
         //// POST: api/ArkUtilities
         //[HttpPost]
