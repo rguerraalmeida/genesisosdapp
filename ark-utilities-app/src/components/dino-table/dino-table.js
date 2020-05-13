@@ -22,12 +22,12 @@ class DinoTable extends React.Component {
         console.log('calling fetch with url',path)
         debugger;
         try {
-          fetch(API + DEFAULT_QUERY)
-          .then(response => response.json())
-          .then(data => 
-          {
-              this.setState({ dinos: data, isLoading: false });
-          });
+          fetch(API + DEFAULT_QUERY);
+          // .then(response => response.json())
+          // .then(data => 
+          // {
+          //     this.setState({ dinos: data, isLoading: false });
+          // });
         } catch(err) {
           console.log(err); // Failed to fetch
         }
