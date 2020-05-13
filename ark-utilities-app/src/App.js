@@ -16,9 +16,9 @@ function App() {
     
       <div className="container-fluid">
         <div className="row no-gutters">
-          <div className="col-2 d-none d-sm-block">
+          {/* <div className="col-2 d-none d-sm-block">
             <MainPanel />
-          </div>
+          </div> */}
           <div className="col-10">
             <div className="row no-gutters" >
               <SearchPanel />
