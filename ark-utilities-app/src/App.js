@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import MainPanel from './components/main-panel/main-panel';
+
 import SearchPanel from './components/search-panel/search-panel';
 import DinoTable from './components/dino-table/dino-table';
+import MainDinoTable from './components/main-dino-table/main-dino-table';
 // import DinoSheetService from './services/dino-sheet-reader';
 // import DinosRepository from './services/dino-sheet-reader';
 
@@ -19,7 +20,7 @@ function App() {
           {/* <div className="col-2 d-none d-sm-block">
             <MainPanel />
           </div> */}
-          <div className="col-10">
+          {/* <div className="col-10">
             <div className="row no-gutters" >
               <SearchPanel />
             </div>
@@ -27,7 +28,11 @@ function App() {
               {<DinoTable />}
               
             </div>
+          </div> */}
+          <div className="col-12">
+            <MainDinoTable />
           </div>
+
         </div>
       </div>
 
