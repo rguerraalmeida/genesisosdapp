@@ -6,6 +6,7 @@ import DinoTable from './components/dino-table/dino-table';
 import MainDinoTable from './components/main-dino-table/main-dino-table';
 // import DinoSheetService from './services/dino-sheet-reader';
 // import DinosRepository from './services/dino-sheet-reader';
+import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
   return (
