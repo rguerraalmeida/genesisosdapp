@@ -152,7 +152,7 @@ class MainDinoTable extends React.Component {
                                 <th scope="col">#</th>
                                 <th scope="col" className="text-left">Class</th>
                                 <th scope="col" className="text-left">Name</th>
-                                <th scope="col" className="text-left">Location</th>  
+                                <th scope="col" className="text-left">Location (lat/long) </th>  
                                 <th scope="col">Tribe//Tamed By</th>
                                 <th scope="col">Map</th>
                                 <th scope="col">Level</th>
