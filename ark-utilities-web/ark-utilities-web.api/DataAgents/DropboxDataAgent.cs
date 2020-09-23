@@ -13,7 +13,10 @@ namespace ark_utilities_web.api.DataAgents
 {
     public class DropboxDataAgent
     {
-        private const string url = "https://www.dropbox.com/s/v4dn5tbtr21pnk6/arkexport.xlsx?dl=1";
+        //private const string url = "https://www.dropbox.com/s/v4dn5tbtr21pnk6/arkexport.xlsx?dl=1";
+        private const string url = "http://88.218.227.56/arkexport/arkexport.xlsx";
+
+        
         public async Task<string> DownloadDinosaursFile()
         {
             HttpClientHandler handler = new HttpClientHandler();

@@ -165,7 +165,7 @@ class MainDinoTable extends React.Component {
                                     <th scope="row">{index}</th>
                                     <td className="text-left">{dino.class + ' ' + dino.gender  } {dino.status === 'Cryopod' ? <img src="https://gamepedia.cursecdn.com/arksurvivalevolved_gamepedia/3/3e/Cryopod.png?version=2e405207abdfa9a31ebc6bdec5a2b09e" alt="" height='16' width='16' />: '' } {dino.outdated === true ? <i class="fa fa-clock-o" aria-hidden="true" />: '' } </td> 
                                     <td className="text-left">{dino.name}</td>
-                                    <td className="text-left">{dino.x.toFixed(1)} // {dino.y.toFixed(1)} </td>
+                                    <td className="text-left">{dino.y.toFixed(1)} // {dino.x.toFixed(1)} </td>
                                     <td>{dino.tamerString && dino.tribeName ? dino.tamerString == dino.tribeName ? dino.tribeName : dino.tribeName +"//"+ dino.tamerString : dino.tamerString}</td>
                                     <td>{dino.sheet}</td>
                                     <td>{dino.level}</td>
