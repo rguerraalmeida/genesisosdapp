@@ -50,24 +50,55 @@ namespace ark_utilities_web.api.Business
 
         private async Task<string> LoadDinosFromStore()
         {
+            //the excel file is exported all days at 5:01 UK time, since i dont know if time as DST applied i change cache at 7:30 GMT
+            // will have to check with Server Admin to match updates in the future
+
             string dinos = string.Empty;
 
-            if (!_cache.TryGetValue("ListOfMissingDinos", out dinos))
+          
+            DateTime excelUpdateDateTime = DateTime.UtcNow.Date.AddHours(7).AddMinutes(30);
+            DateTime lastCachedDate;
+            DateTime now = DateTime.UtcNow;
+
+            var exists = _cache.TryGetValue("lastCachedDate", out lastCachedDate);
+
+            bool mustUpdate = false;
+
+            if (!exists)
             {
-                Console.WriteLine("Cache miss....loading from database into cache");
+                mustUpdate = true;
+            }
+            else if (exists && (lastCachedDate < excelUpdateDateTime) && (now > excelUpdateDateTime))
+            {
+                mustUpdate = true;
+            }
+
+            if (mustUpdate)
+            {
                 DropboxDataAgent dropboxDataAgent = new DropboxDataAgent();
                 dinos = await dropboxDataAgent.DownloadDinosaursFile();
 
-                //the excel file is exported all days at 5:01 UK time, since i dont know if time as DST applied i change cache at 7:30 GMT
-                // will have to check with Server Admin to match updates in the future
-                int offset = DateTime.UtcNow.Hour >= 7 ? 1 : 0;
-                DateTimeOffset cacheOffset = new DateTimeOffset(DateTime.UtcNow.Date.AddDays(offset).AddHours(7).AddMinutes(30));
-
-                _cache.Set("ListOfMissingDinos", dinos, cacheOffset);
+                if (!string.IsNullOrEmpty(dinos))
+                {
+                    _cache.Set("ListOfMissingDinos", dinos);
+                    _cache.Set("lastCachedDate", now);
+                }
             }
             else
             {
-                Console.WriteLine("Cache hit");
+                var dinosExists = _cache.TryGetValue("ListOfMissingDinos", out dinos);
+                
+                if (!dinosExists)
+                {
+                    DropboxDataAgent dropboxDataAgent = new DropboxDataAgent();
+                    dinos = await dropboxDataAgent.DownloadDinosaursFile();
+
+                    if (!string.IsNullOrEmpty(dinos))
+                    {
+                        _cache.Set("ListOfMissingDinos", dinos);
+                        _cache.Set("lastCachedDate", now);
+                    }
+                }
             }
 
             return dinos;
