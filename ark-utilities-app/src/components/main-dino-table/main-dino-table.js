@@ -104,34 +104,6 @@ class MainDinoTable extends React.Component {
                     <input title="Search" value="Go" type="submit" className="button" onClick={this.handleSearchClick} />
                 </form>
 
-                {/* <div className="d-flex">
-                    <DropdownMultiselect
-                        options={this.state.searchOption[0]}
-                        name="maps"
-                        handleOnChange={(selected) => {
-                            debugger
-                            console.log("maps selected changed, maps", selected);
-                            const options = this.state.filteredOptions[1];
-
-
-                            this.setState({filteredOptions : [selected, options]});
-                            this.handleFilterChange(this.state.filteredOptions);
-                        }}
-                    />
-                      <DropdownMultiselect
-                        options={this.state.searchOption[1]}
-                        name="countries"
-                        handleOnChange={(selected) => {
-                            debugger
-                            console.log("class selected changed", selected);
-                            const options = this.state.filteredOptions[0];
-                            this.setState({filteredOptions : [ options, selected ]});
-                            this.handleFilterChange(this.state.filteredOptions);
-                        }}
-                    />
-                </div> */}
-
-
                  {/* search tools  */}
                
                 {this.state.error && <div>{this.state.error}</div>}

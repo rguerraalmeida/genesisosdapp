@@ -12,7 +12,20 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar navbar-expand navbar-dark bg-dark">
-        <a className="navbar-brand" href="#">UK PvE No mods | Dino search utility</a>
+        <a className="navbar-brand" href="#">UK PvE No mods | Dino search utility || </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Seach tool<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ASB Guide</a>
+              </li>
+            </ul>
+          </div>
       </nav>
     
       <div className="container-fluid">
