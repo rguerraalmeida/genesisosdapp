@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ark_utilities_web.api.CustomAppSettings;
+using ark_utilities_web.api.ServiceExtensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+
 
 namespace ark_utilities_web.api
 {
@@ -27,6 +30,7 @@ namespace ark_utilities_web.api
         {
             services.AddMemoryCache();
             services.AddControllers();
+            services.AddAppCustomConfig(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
